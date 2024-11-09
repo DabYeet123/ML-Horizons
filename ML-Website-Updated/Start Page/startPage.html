@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Quiz</title>
+    <link rel="stylesheet" href="startPage.css">
+</head>
+<body>
+    <div class="quiz-container">
+        <h1>Welcome!</h1>
+
+        <!-- User Name Input -->
+        <div id="name-container">
+            <p>Please enter your name:</p>
+            <input type="text" id="user-name" placeholder="Your Name">
+            <button id="start-btn">Start Quiz</button>
+        </div>
+
+        <!-- Questions will be shown one by one -->
+        <form id="quiz-form" style="display: none;">
+            <!-- Question 1 -->
+            <div class="question" id="question-1" style="display: none;">
+                <p>What Is Your Level Of Programming Experience?</p>
+                <div class="answer-options">
+                    <div class="answer-box">
+                        <input type="radio" id="color-red" name="q1" value="Beginner" onclick="toggleHighlight('q1')" class="btn">
+                        <label for="color-red">Beginner</label>
+                    </div>
+                    <div class="answer-box">
+                        <input type="radio" id="color-blue" name="q1" value="Intermediate" onclick="toggleHighlight('q1')" class="btn">
+                        <label for="color-blue">Intermediate</label>
+                    </div>
+                    <div class="answer-box">
+                        <input type="radio" id="color-green" name="q1" value="Advanced" onclick="toggleHighlight('q1')" class="btn">
+                        <label for="color-green">Advanced</label>
+                    </div>
+                    <div class="answer-box">
+                        <input type="radio" id="color-yellow" name="q1" value="Expert" onclick="toggleHighlight('q1')" class="btn">
+                        <label for="color-yellow">Expert</label>
+                    </div>
+                </div>
+                <button type="button" class="next-btn">Next</button>
+            </div>
+            
+            <!-- Question 2 -->
+            <div class="question" id="question-2" style="display: none;">
+                <p>What Area Would You Like To Learn?</p>
+                <div class="answer-options">
+                    <div class="answer-box">
+                        <input type="radio" id="music-rock" name="q2" value="AI Bot" onclick="toggleHighlight('q2')" class="btn">
+                        <label for="music-rock">AI Bot</label>
+                    </div>
+                    <div class="answer-box">
+                        <input type="radio" id="music-pop" name="q2" value="Machine Learning Algorithms" onclick="toggleHighlight('q2')" class="btn">
+                        <label for="music-pop">Machine Learning Algorithms</label>
+                    </div>
+                    <div class="answer-box">
+                        <input type="radio" id="music-classical" name="q2" value="Others" onclick="toggleHighlight('q2')" class="btn">
+                        <label for="music-classical">Others</label>
+                    </div>
+                </div>
+                <button type="button" class="next-btn">Next</button>
+            </div>
+            
+            <!-- Question 3 -->
+            <div class="question" id="question-3" style="display: none;">
+                <p>3. How do you prefer to spend your free time?</p>
+                <div class="answer-options">
+                    <div class="answer-box">
+                        <input type="radio" id="activity-reading" name="q3" value="Reading">
+                        <label for="activity-reading">Reading</label>
+                    </div>
+                    <div class="answer-box">
+                        <input type="radio" id="activity-watching-tv" name="q3" value="Watching TV">
+                        <label for="activity-watching-tv">Watching TV</label>
+                    </div>
+                    <div class="answer-box">
+                        <input type="radio" id="activity-sports" name="q3" value="Sports">
+                        <label for="activity-sports">Sports</label>
+                    </div>
+                    <div class="answer-box">
+                        <input type="radio" id="activity-gaming" name="q3" value="Gaming">
+                        <label for="activity-gaming">Gaming</label>
+                    </div>
+                </div>
+                <button type="button" id="submit-btn">Submit</button>
+            </div>
+        </form>
+
+        <!-- Result Display -->
+        <div id="result" style="display: none;"></div>
+    </div>
+
+    <script src="startPage.js"></script>
+</body>
+</html>

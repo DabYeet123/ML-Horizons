@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interactive Text Highlight</title>
+  <link rel="stylesheet" href="canvasPage.css">
+  <link rel="stylesheet" href="chat.css">
+  <link rel="stylesheet" href="resizer.css">
+  <!--
+  <script src="codemirror/lib/codemirror.js"></script>
+  <link rel="stylesheet" href="codemirror/lib/codemirror.css">
+  <script src="codemirror/mode/python/python.js"></script>
+  <link rel="styelsheet" href="codemirror/theme/dracula.css">-->
+</head>
+<body>
+  <div id="questionBody"></div>
+  <div id = "canvasBody">
+    <div id="TopHeader"></div>
+    <div class="container">
+      <div class="textContainer" id="leftPanel">
+          <!--<textarea id="textArea">Type and highlight any text here...</textarea>-->
+          <div class = "requirement">
+            <header>Requirement</header>
+          </div>
+        </div>
+
+      <div class="resizer" id="resizer"></div>
+
+      <div class="chat-container" id="rightPanel">
+        <header id="chatHeader">
+          <h1>Dab Learner</h1>
+        </header>
+        <div class="messages" id="messages">
+        </div>
+        <div class="input-area">
+            <input type="text" id="user-input" placeholder="Type a message..." />
+            <button id="send-button">Send</button>
+        </div>
+      </div>
+
+        <div id="promptButton">
+          <button id="askPrompt" onclick="enablePrompt()">Ask AI</button>
+        </div>
+        <div id="promptPopup">
+          <label for="promptInput">Enter your prompt:</label><br>
+          <input type="text" id="promptInput" placeholder="Type here...">
+          <button onclick="submitPrompt()">Submit</button>
+        </div>
+    </div>
+  </div>
+  <script src="canvasPage.js"></script>
+  <script src="chat.js"></script>
+  <script src="resizer.js"></script>
+  <script src="../../question/question.js"></script>
+  <script src="../../dropDown/dropDown.js"></script>
+</body>
+</html>

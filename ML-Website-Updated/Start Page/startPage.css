@@ -1,0 +1,95 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #D9AFD9;
+    background-image: linear-gradient(0deg, #D9AFD9 0%, #97D9E1 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.quiz-container {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    width: 100%;
+    text-align: center; /* Center text */
+}
+
+h1 {
+    color: #333;
+}
+
+.question, #name-container {
+    margin-bottom: 20px;
+}
+
+.question p, #name-container p {
+    font-weight: bold;
+}
+
+.answer-options {
+    display: flex; /* Use flexbox for horizontal layout */
+    justify-content: space-around; /* Space items evenly */
+    margin-bottom: 15px; /* Space below answers */
+}
+
+.answer-box {
+    flex:1;
+    margin: 0 5px; /* Space between boxes */
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+    text-align: center; /* Center text inside boxes */
+    cursor: pointer; /* Pointer cursor */
+    transition: background-color 0.3s, border-color 0.3s;
+    display: flex;               /* Enable flexbox */
+    justify-content: center;     /* Center horizontally */
+    align-items: center;
+}
+
+.answer-box:hover{
+    background-color: #3c93e4;
+    border-color: #006bbd;
+}
+
+input[type="radio"] {
+    display: none; /* Hide radio buttons */
+}
+
+input[type="radio"]:checked + label {
+    background-color: #3c93e4; /* Change background when checked */
+    color: white; /* Change text color when checked */
+}
+
+label {
+    display: block;
+    margin-top: 5px; /* Space between label and radio */
+    cursor: pointer; /* Pointer cursor on labels */
+}
+
+button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #0084ff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #006bbd;
+}
+
+#result {
+    margin-top: 20px;
+    text-align: center;
+    font-weight: bold;
+}
